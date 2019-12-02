@@ -20,15 +20,31 @@ public class MainActivity extends AppCompatActivity {
 
         User = findViewById (R.id.user);
         password = findViewById(R.id.password);
-        login = findViewById(R.id.login);
+
+
+        int login = R.id.login;
+        Button loginbutton = findViewById(login);
+        loginbutton.setTag(login);
+        loginbutton.setOnClickListener(new Login());
 
     }
 
-    public class ButtonHandler implements View.OnClickListener {
+
+
+
+
+    public class Login implements View.OnClickListener {
+
 
         //waits for click
         @Override
         public void onClick(View v) {
+
+        String userdata = User.getText().toString();
+        String passworddata = password.getText().toString();
+        System.out.println(userdata + " " +  passworddata);
+
+
 
 
 
