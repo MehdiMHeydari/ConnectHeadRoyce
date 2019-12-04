@@ -9,17 +9,21 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText User;
-    private EditText password;
+    public static EditText user;
+    public static EditText password;
     private Button login;
+    static String userdata2 = user.getText().toString();
+    static String passworddata2 = password.getText().toString();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        User = findViewById (R.id.user);
-        password = findViewById(R.id.password);
+        user = findViewById(R.id.user);
+       password = findViewById(R.id.password);
+
+
 
 
         int login = R.id.login;
@@ -32,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     public class Login implements View.OnClickListener {
 
 
@@ -40,18 +43,31 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-        String userdata = User.getText().toString();
-        String passworddata = password.getText().toString();
-        System.out.println(userdata + " " +  passworddata);
-
-
-
-
+            String userdata = user.getText().toString();
+            String passworddata = password.getText().toString();
+            System.out.println(userdata + " " + passworddata);
 
 
         }
 
 
+    }
+
+    public static class UserData {
+
+        public static String GetUser(){
+            return userdata2;
+        }
+
+        public static String GetPassword(){
+            return passworddata2;
+        }
 
     }
+
+
+
+
 }
+
+
