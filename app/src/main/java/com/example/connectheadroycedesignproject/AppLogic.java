@@ -1,5 +1,10 @@
 package com.example.connectheadroycedesignproject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+
 public class AppLogic {
     private static String user;
     private static String password;
@@ -7,20 +12,7 @@ public class AppLogic {
 
 
 
-    public AppLogic{
-        user = MainActivity.UserData.GetUser();
-        password = MainActivity.UserData.GetPassword();
 
-    }
-
-    //public boolean checkuser{
-
-
-
-
-
-
-    //}
 
 }
 
