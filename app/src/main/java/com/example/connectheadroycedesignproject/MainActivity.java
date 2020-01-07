@@ -2,6 +2,7 @@ package com.example.connectheadroycedesignproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -53,16 +54,33 @@ public class MainActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         password = findViewById(R.id.password);
 
-        userdata2 = user.getText().toString();
-        passworddata2 = password.getText().toString();
+        //userdata2 = user.getText().toString();
+        //passworddata2 = password.getText().toString();
 
         int login = R.id.login;
         Button loginbutton = findViewById(login);
         loginbutton.setTag(login);
         loginbutton.setOnClickListener(new HandleButton());
 
+
+        int toregister = R.id.toregister;
+        Button registerbutton = findViewById(toregister);
+        registerbutton.setTag(toregister);
+        registerbutton.setOnClickListener(new toregister());
+
     }
 
+    private class toregister implements View.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+
+            startActivity(new Intent(MainActivity.this, GPSActivity.class));
+
+        }
+
+
+    }
 
     private class HandleButton implements View.OnClickListener {
 
@@ -70,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         //waits for click
         @Override
         public void onClick(View v) {
-
+            System.out.println("hi");
             String userdata = user.getText().toString();
             String passworddata = password.getText().toString();
             System.out.println(userdata + " " + passworddata);
@@ -79,14 +97,14 @@ public class MainActivity extends AppCompatActivity {
             Thread thread = new Thread(new Runnable() {
                 public void run() {
                     try {
-                        String URL = "http://127.0.0.1:8080/register";
+                        String URL = "http://10.40.1.200:8080/login";
                         HashMap<String, String> server = new HashMap<String, String>();
                         server.put("userkey", "myusername");
                         server.put("passkey", "mypassword");
 
-                        System.out.println("hi");
 
-                        String Method = "POST";
+
+                        String Method = "GET";
                         String URLEncodedData = "";
                         for (String param : server.keySet()) {
 
@@ -180,6 +198,10 @@ public class MainActivity extends AppCompatActivity {
             thread.start();
         }
     }
+
+
+
+
 }
 
 
