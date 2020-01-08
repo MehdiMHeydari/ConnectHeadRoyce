@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             Thread thread = new Thread(new Runnable() {
                 public void run() {
                     try {
-                        String URL = "http://10.40.1.200:8080/login";
+                        String URL = "http://10.40.1.190:8080/login";
                         HashMap<String, String> server = new HashMap<String, String>();
                         server.put("userkey", "myusername");
                         server.put("passkey", "mypassword");

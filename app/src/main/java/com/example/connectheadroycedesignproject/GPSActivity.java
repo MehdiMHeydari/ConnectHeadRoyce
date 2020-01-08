@@ -45,7 +45,8 @@ public class GPSActivity  extends AppCompatActivity {
                     @Override
                     public void onSuccess(Location location) {
 
-                        System.out.println("onsuc");
+                        System.out.println(location);
+
 
                         if (location!= null){
                             TextView textView= findViewById(R.id.location);
