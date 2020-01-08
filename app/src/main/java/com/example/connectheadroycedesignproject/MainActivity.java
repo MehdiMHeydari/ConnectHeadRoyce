@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-            startActivity(new Intent(MainActivity.this, GPSActivity.class));
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
 
         }
 
@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
         //waits for click
         @Override
         public void onClick(View v) {
-            System.out.println("hi");
+            startActivity(new Intent(MainActivity.this, HubPageActivity.class));
+            /*System.out.println("hi");
             String userdata = user.getText().toString();
             String passworddata = password.getText().toString();
             System.out.println(userdata + " " + passworddata);
@@ -200,8 +201,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+             */
+        }
 
-
+        }
 }
 
 
