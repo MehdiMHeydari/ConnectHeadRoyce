@@ -1,0 +1,47 @@
+
+4hu<html>
+    <head>
+        <title>Register Page</title>
+    </head>
+
+    <body>
+        <form method='POST' action='/register'>
+            Username: <input id="user" type="username" name="username" onchange="checkUser();">
+            Username Taken
+            Password: <input id="pass" type="password" name="password" onchange="checkPass();">
+            Re-enter Password: <input id="pass2" type="password" name='verify' onchange="checkPass();">
+            Create Account<input id="submitbutton" type="submit" disabled>
+        </form>
+        
+        Click <a href='/login'> Here </a> to Log In.
+  
+
+        <script type="text/javascript">
+            function checkUser(){
+                let usercheck = window.location + "?username=", username;
+                    if(document.getElementById("user").value == null){
+                        document.getElementById("submitbutton").disabled = true;
+                    }
+                    
+                    else if(fetch(usercheck) == "false"){
+                        document.getElementById("submitbutton").disabled = true;
+                    }
+                    else{
+                        document.getElementById("submitbutton").disabled = false;
+                    }
+                     
+                } 
+            
+            function checkPass(){
+        
+                if(document.getElementById("pass").value == document.getElementById("pass2").value){
+                     document.getElementById("submitbutton").disabled = false;
+                }
+                else {
+                    document.getElementById("submitbutton").disabled = true;
+                }
+                
+            }
+        </script>
+    </body>
+</html>

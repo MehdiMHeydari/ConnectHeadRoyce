@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style type='text/css'>
+        input{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form{
+            border: 1px solid black;
+            display: inline-block;
+            padding: 5px;
+            min-width: 80%;
+            
+        }
+
+        a{
+            display: block;
+            text-decoration: none;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: lightgray;
+            color: white;
+            margin: 0 auto;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        </style>
+    </head>
+    <title>
+        Login
+    </title>
+
+    <body>
+        <form method = 'post' action = '/login'>
+        Username: <input name ='username'>
+        Password: <input name='password' type = password> Password should be at least 6 characters long, have one capital letter and one number
+        <input type='submit'/>
+        </form>
+
+        <a href='/register'>New User?</a>
+        
+    </body>
+</html>
