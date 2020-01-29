@@ -1,24 +1,11 @@
+This is a project I am currently working on that is the frame work for an app that will allow students at Head Royce to have to all there school resources in one spot. Currently I am implementing a gps that will allow parents to communicate locations for our carpooling service but I am still establishing its framework as well. 
+
 
 ConnectHRS
 User Guide
 ─
-Applications Needed:
-Visual Studio Code
-Npm
-Android Studio
-A device running Mac OS 
-Part 1: HTML Client
-*Before doing anything of the following, make sure you have npm, android studio and Visual Studio Code Installed
-Download the zip file Named “MehdiOttoDesignProject”
 
-Unzip the file by going to finder>documents>downloads and double clicking on the file
-Find the file in the downloads folder and move it to your desktop
-Open Visual Studio Code and click “open folder”
-Select MehdiOttoDesginProject
-Select DesignProjectServer from inside that file
-Click on server.js on the right side of the window
-
-
+Part 1: Server
 Press control + ` to open console
 Type “xcode-select --install” into the console (without the quotes) 
 After the first download is finished, type “npm install” into the console
